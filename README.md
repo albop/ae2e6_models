@@ -1,5 +1,7 @@
 # Voici demo
 
+check solara 
+
 [![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://voila-dashboards.github.io/voici-demo)
 
 [Voici](https://github.com/voila-dashboards/voici) deployed as a static site to GitHub Pages, for demo purposes.
