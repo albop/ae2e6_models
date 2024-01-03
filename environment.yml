@@ -4,5 +4,7 @@ channels:
   - https://repo.mamba.pm/conda-forge
 dependencies:
   - pandas <2
+  - numpy
   - bqplot
   - reacton
+  - ipyvuetify
