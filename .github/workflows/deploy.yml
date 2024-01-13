@@ -39,7 +39,7 @@ jobs:
 
       - name: Show directory
         shell: bash -l {0}
-        run: echo $pwd
+        run: echo $(pwd)
         
       - name: Build the JupyterLite site
         shell: bash -l {0}
