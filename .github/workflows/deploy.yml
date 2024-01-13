@@ -39,7 +39,7 @@ jobs:
 
       - name: Show directory
         shell: bash -l {0}
-        run: sed '3i  - file:///home/runner/work/voicitest/voicitest/repo' environment.yml
+        run: sed '3i\ \ - file:///home/runner/work/voicitest/voicitest/repo' -i environment.yml
 
       - name: Show environment.yml
         shell: bash -l {0}
