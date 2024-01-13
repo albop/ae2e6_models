@@ -34,6 +34,7 @@ jobs:
 
       - name: Index local repo
         shell: bash -l {0}
+        run:
           python -m conda_index repo
           
       - name: Build the JupyterLite site
