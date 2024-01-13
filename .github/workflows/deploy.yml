@@ -27,7 +27,7 @@ jobs:
           environment-file: 'build-environment.yml'
 
       - name: Download Custom version of Solara
-        # shell: bash -l {}
+        shell: bash -l {}
         run: |
           mkdir -p repo/noarch
           wget https://github.com/albop/dyno.py/raw/artefacts/packages/noarch/solara-assets-nodeps-1.25.0-py_0.tar.bz2 -P repo/noarch
