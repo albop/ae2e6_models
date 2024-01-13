@@ -38,7 +38,7 @@ jobs:
           python -m conda_index repo
           
       - name: Build the JupyterLite site
-
+        shell: bash -l {0}
         run: voici build --contents content --output-dir dist
 
       - name: Upload artifact
