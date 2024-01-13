@@ -26,6 +26,16 @@ jobs:
           micromamba-version: '1.4.2'
           environment-file: 'build-environment.yml'
 
+      - name: Download Custom version of Solara
+        # shell: bash -l {}
+        run: >
+          mkdir -p repo/noarch
+          wget https://github.com/albop/dyno.py/raw/artefacts/packages/noarch/solara-assets-nodeps-1.25.0-py_0.tar.bz2 -P repo/noarch
+          wget https://github.com/albop/dyno.py/raw/artefacts/packages/noarch/solara-nodeps-1.25.0-py_0.tar.bz2 -P repo/noarch
+          conda index repo
+          echo "Working Directory"
+          echo $pwd
+          
       - name: Build the JupyterLite site
         shell: bash -l {0}
         run: voici build --contents content --output-dir dist
