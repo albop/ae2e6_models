@@ -39,7 +39,11 @@ jobs:
 
       - name: Show directory
         shell: bash -l {0}
-        run: echo $(pwd)
+        run: sed '3i  - file:///home/runner/work/voicitest/voicitest/repo' environment.yml
+
+      - name: Show environment.yml
+        shell: bash -l {0}
+        run: cat environment.yml
         
       - name: Build the JupyterLite site
         shell: bash -l {0}
