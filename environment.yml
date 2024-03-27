@@ -10,3 +10,4 @@ dependencies:
   - reacton
   - ipyvuetify
   - solara-nodeps
+  - dyno
