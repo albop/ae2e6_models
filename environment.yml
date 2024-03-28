@@ -12,3 +12,4 @@ dependencies:
   - ipyvuetify
   - solara-nodeps
   - dyno
+  - scipy
