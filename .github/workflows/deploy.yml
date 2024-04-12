@@ -41,7 +41,7 @@ jobs:
 
       - name: Show directory
         shell: bash -l {0}
-        run: sed '3i\ \ - file:///home/runner/work/voicitest/voicitest/repo' -i environment.yml
+        run: sed '3i\ \ - file:///home/runner/work/ae2e6_models/ae2e6_models/repo' -i environment.yml
 
       - name: Show environment.yml
         shell: bash -l {0}
@@ -49,7 +49,7 @@ jobs:
         
       - name: Build the JupyterLite site
         shell: bash -l {0}
-        run: jupyter lite build --apps lab --apps retro --contents content --XeusAddon.empack_config=empack_config.yaml --output-dir dist
+        run: voici build --contents content --output-dir dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
