@@ -1,0 +1,14 @@
+[project]
+name = "voicitest"
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["Pablo Winant <pablo.winant@gmail.com>"]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tasks]
+
+[dependencies]
+voici = "0.6.0.*"
+conda-index = "0.4.0.*"
+jupyterlite = "0.2.3.*"
