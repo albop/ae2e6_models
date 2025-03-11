@@ -1,20 +1,21 @@
 name: voici
 channels:
-  - file:///home/pablo/Econforge/voicitest/repo
+  - file:///home/pablo/Source/ae2e6_models_2/repo
   - https://repo.mamba.pm/emscripten-forge
   - https://repo.mamba.pm/conda-forge
 dependencies:
   - xeus-python
   - mock
-  - pandas <2
+  - pandas
   - numpy
-  - bqplot
   - reacton
   - ipyvuetify
   - markdown
   - pymdown-extensions
-  - solara-nodeps
+  - solara-ui
   - dyno
   - dolang
   - scipy
+  - numpy==1.25.2
+  - anywidget
   - plotly

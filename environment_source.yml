@@ -5,15 +5,16 @@ channels:
 dependencies:
   - xeus-python
   - mock
-  - pandas <2
+  - pandas
   - numpy
-  - bqplot
   - reacton
   - ipyvuetify
   - markdown
   - pymdown-extensions
-  - solara-nodeps
+  - solara-ui
   - dyno
   - dolang
   - scipy
+  - numpy==1.25.2
+  - anywidget
   - plotly
