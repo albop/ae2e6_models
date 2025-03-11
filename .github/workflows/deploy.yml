@@ -21,17 +21,15 @@ jobs:
           python-version: '3.10'
 
       - name: Install mamba
-        uses: mamba-org/provision-with-micromamba@main
+        uses: mamba-org/setup-micromamba@v1
         with:
-          micromamba-version: '1.4.2'
+          micromamba-version: '1.5.8-0'
           environment-file: 'build-environment.yml'
 
       - name: Download Custom version of Solara
         run: |
           mkdir -p repo/noarch
-          wget https://github.com/albop/dyno.py/raw/artefacts/packages/noarch/solara-assets-nodeps-1.25.0-py_0.tar.bz2 -P repo/noarch
-          wget https://github.com/albop/dyno.py/raw/artefacts/packages/noarch/solara-nodeps-1.25.0-py_0.tar.bz2 -P repo/noarch
-          wget https://github.com/albop/dyno.py/raw/artefacts/packages/noarch/dyno-0.1.4-py_0.tar.bz2 -P repo/noarch
+          wget https://github.com/albop/dyno.py/raw/artefacts/packages/noarch/dyno-0.1.4-py_0.conda -P repo/noarch
           wget https://github.com/albop/dyno.py/raw/artefacts/packages/noarch/dolang-0.0.20-py_2.tar.bz2 -P repo/noarch
  
       - name: Build the JupyterLite site
@@ -39,7 +37,7 @@ jobs:
         run: sh build_dist.sh
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
@@ -58,4 +56,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
